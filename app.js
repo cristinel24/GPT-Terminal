@@ -2,12 +2,16 @@ const { Configuration, OpenAIApi } = require('openai');
 require('dotenv/config');
 const readline = require('readline');
 
-let conversationLog;
+let conversationLog = {};
 
 const configuration = new Configuration({
     apiKey: process.env.token,
 })
 const openai = new OpenAIApi(configuration);
+
+process.on("unhandledRejection", () => {
+    return console.log("Error: Network Error, please try again!");
+})
 
 function askQuestion(query) {
     const rl = readline.createInterface({
@@ -19,6 +23,16 @@ function askQuestion(query) {
         rl.close();
         resolve(ans);
     }))
+}
+
+function parse(string) {
+    let args = string.split("```");
+    console.log(args[0]);
+    if (args[1] && args[2]) {
+        console.log('\x1b[7m%s\x1b[0m', args[1]);
+        console.log(args[2]);
+    }
+    console.log('\n');
 }
 
 async function logs(quest) {
@@ -35,22 +49,13 @@ async function logs(quest) {
         messages: conversationLog,
     });
 
-    console.log("\x1b[32m%s\x1b[0m", "Response: ")
-    console.log(result.data.choices[0].message.content);
-    console.log("\n\n");
-}
-
-function init() {
-    conversationLog = [
-        {
-            role: 'system',
-            content: 'You are a programmer chatbot.'
-        }];
+    console.log("\x1b[32m%s\x1b[0m", "Response:\n")
+    parse(result.data.choices[0].message.content);
 }
 
 async function run() {
 
-    init();
+    conversationLog = [{ role: 'system', content: 'You are a programmer chatbot.' }];
 
     while (true) {
         let question = await askQuestion("\nQuestion: ");
