@@ -1,0 +1,14 @@
+{
+  "name": "gpt-terminal",
+  "version": "0.0.0",
+  "description": "GPT Terminal",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1",
+    "readline": "^1.3.0"
+  }
+}
