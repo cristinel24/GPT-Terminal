@@ -13,6 +13,11 @@ process.on("unhandledRejection", () => {
     return console.log("Error: Network Error, please try again!");
 })
 
+process.on("exit", async ()=> {
+    console.clear();
+
+})
+
 function askQuestion(query) {
     const rl = readline.createInterface({
         input: process.stdin,
