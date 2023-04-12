@@ -1,6 +1,7 @@
 const { Configuration, OpenAIApi } = require('openai');
 require('dotenv/config');
 const readline = require('readline');
+const fs = require('fs');
 
 let conversationLog = {};
 
@@ -17,6 +18,7 @@ process.on("exit", async ()=> {
     console.clear();
 
 })
+
 
 function askQuestion(query) {
     const rl = readline.createInterface({
@@ -54,7 +56,7 @@ async function logs(quest) {
         messages: conversationLog,
     });
 
-    console.log("\x1b[32m%s\x1b[0m", "Response:\n")
+    console.log("\x1b[32m%s\x1b[0m", "R:\n")
     parse(result.data.choices[0].message.content);
 }
 
@@ -63,8 +65,13 @@ async function run() {
     conversationLog = [{ role: 'system', content: 'You are a programmer chatbot.' }];
 
     while (true) {
-        let question = await askQuestion("\nQuestion: ");
-        await logs(question);
+        let question = await askQuestion("\n->: ");
+        if (question == "read") {
+            let data = await fs.readFileSync('input.txt', 'utf8');
+            
+            await logs(data);
+        }
+        else await logs(question);
     }
 }
 
