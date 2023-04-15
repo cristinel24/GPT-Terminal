@@ -2,7 +2,7 @@
 
 > Basic program in Javascript (Node.js) that allows the usage of OpenAI's API through the terminal.
 
-<img src=".examples/screenshot.gif" width="404">
+<img src="examples/screenshot.gif" width="404">
 
 ## Install
 
@@ -22,7 +22,7 @@ Once you installed the npm package, you need to setup your API key.<br /><br />
 Create a `.env` file that contains `token=<api_key>` where you downloaded this module.<br />
 `<api_key>` will be replaced with your [ChatGPT API Key](https://platform.openai.com/account/api-keys).
 
-<img src=".examples/env.png" width="404">
+<img src="examples/env.png" width="404">
 
 
 ## Usage
@@ -34,12 +34,12 @@ gpt
 
 Once you're done with that, a new pop-ul will appear on screen:
 
-<img src=".examples/question.png" width="404">
+<img src="examples/question.png" width="404">
 
 Just type your question for [ChatGPT](https://chat.openai.com/chat).<br />
 If you want to give a file as an input just type `read <your_file_name>` like this:
 
-<img src=".examples/example.png" width="404">
+<img src="examples/example.png" width="800">
 
 > *PS: Quotes " " are optional.*
 
