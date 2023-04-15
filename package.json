@@ -1,15 +1,34 @@
 {
   "name": "gpt-terminal",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "GPT Terminal",
   "main": "app.js",
-  "author": {
-    "name": ""
+  "bin": {
+	"gpt": "app.js"
   },
+  "author": "Cristian Andrei",
   "dependencies": {
     "dotenv": "^16.0.3",
     "fs": "^0.0.1-security",
     "openai": "^3.2.1",
     "readline": "^1.3.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "gpt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristinel24/GPT-Terminal.git"
+  },
+  "keywords": [
+    "ChatGPT",
+    "Terminal",
+    "GPT-Terminal"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristinel24/GPT-Terminal/issues"
+  },
+  "homepage": "https://github.com/cristinel24/GPT-Terminal#readme"
 }
