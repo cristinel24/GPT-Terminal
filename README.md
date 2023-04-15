@@ -17,12 +17,11 @@ Or
 npm install --global gpt-terminal
 ```
 
-<br />
 Once you installed the npm package, you need to setup your API key:<br /><br />
-* Create a `.env` file that contains `token=api_key` where you downloaded this module.<br />
-* `api_key` will be replaced with your ChatGPT API Key. Click [here](https://platform.openai.com/account/api-keys) to get it. <br />
+Create an environment file (where you downloaded this module) that contains your api .<br />
+`<API_KEY>` will be replaced with your ChatGPT API Key. Click [here](https://platform.openai.com/account/api-keys) to get it. <br />
 
-<img src="examples/env.png" width="404">
+<img src="examples/env.png" height= "200" width="404">
 
 
 ## Usage
