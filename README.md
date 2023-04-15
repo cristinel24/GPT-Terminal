@@ -18,9 +18,9 @@ npm install --global gpt-terminal
 ```
 
 <br />
-Once you installed the npm package, you need to setup your API key.<br /><br />
-Create a `.env` file that contains `token=api_key` where you downloaded this module.<br />
-`api_key` will be replaced with your ChatGPT API Key. Click [HERE](https://platform.openai.com/account/api-keys) to get it. <br />
+Once you installed the npm package, you need to setup your API key:<br /><br />
+* Create a `.env` file that contains `token=api_key` where you downloaded this module.<br />
+* `api_key` will be replaced with your ChatGPT API Key. Click [here](https://platform.openai.com/account/api-keys) to get it. <br />
 
 <img src="examples/env.png" width="404">
 
@@ -45,4 +45,4 @@ If you want to give a file as an input just type `read <your_file_name>` like th
 
 ## Important!
 
-Be aware that any newline ('\n') sent as input directly from the terminal will be recognized as an 'Enter' resulting in sending the query to ChatGPT. If you want to use text blocks as input, I recommend putting them in a file and doing the step above.
+Be aware that any newline `'\n'` sent as input directly from the terminal will be recognized as an `Enter` resulting in sending the query to ChatGPT. If you want to use text blocks as input, I recommend putting them in a file and doing the step above.
