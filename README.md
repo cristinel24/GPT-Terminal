@@ -40,7 +40,7 @@ If you want to give a file as an input just type `read <your_file_name>` like th
 
 <img src="examples/example.png" width="800">
 
-> *PS: Quotes " " are optional.*
+> *PS: Quotes " " are optional. Ctrl+C to stop the application.*
 
 ## Important!
 

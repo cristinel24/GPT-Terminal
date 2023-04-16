@@ -1,10 +1,10 @@
 {
   "name": "gpt-terminal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GPT Terminal",
   "main": "app.js",
   "bin": {
-	"gpt": "app.js"
+    "gpt": "app.js"
   },
   "author": "Cristian Andrei",
   "dependencies": {
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/cristinel24/GPT-Terminal/issues"
   },
-  "homepage": "https://github.com/cristinel24/GPT-Terminal#readme"
+  "homepage": "https://github.com/cristinel24/GPT-Terminal#readme",
+  "directories": {
+    "example": "examples"
+  }
 }
